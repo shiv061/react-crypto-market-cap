@@ -54,3 +54,7 @@ code {
 .animate-color {
   @apply transition-colors duration-500;
 }
+
+.animate-transform {
+  @apply transition-transform duration-500;
+}

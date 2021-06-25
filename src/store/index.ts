@@ -25,7 +25,7 @@ export const useStore = create<IStore>(
       fetchCoinsData: async () => {
         try {
           set({ loading: true, error: null });
-          const data = await fetchCoins({ currency: 'usd' });
+          const data = await fetchCoins({ currency: 'usd', perPage: 20 });
           set({ coins: data, loading: false, error: null });
         } catch (error) {
           set({ error: 'Something went wrong', loading: false });

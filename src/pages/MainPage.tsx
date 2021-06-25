@@ -22,7 +22,7 @@ export const MainPage = () => {
 
   return (
     <div className="screen animate-color" style={{ minHeight: 'calc(100vh - 64px)' }}>
-      <div>
+      <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {coinsData?.map((coin) => (
           <CoinsList key={coin.id} {...coin} />
         ))}

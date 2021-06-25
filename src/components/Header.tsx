@@ -19,8 +19,8 @@ export const Header = () => {
   );
 
   return (
-    <div className="h-16 w-full fixed top-0 bg-white dark:bg-gray-900 shadow-sm animate-color">
-      <div className="flex items-center h-full w-full justify-between px-2">
+    <div className="h-16 w-full fixed top-0 bg-white dark:bg-gray-900 shadow-sm animate-color z-10">
+      <div className="flex items-center h-full w-full justify-between px-4">
         <span className="flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-900 dark:text-blue-500" viewBox="0 0 20 20" fill="currentColor">
             <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
