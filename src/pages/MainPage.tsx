@@ -9,8 +9,8 @@ export const MainPage = () => {
   const loading = useStore((state) => state.loading);
 
   useEffect(() => {
-    // fetchCoinsData();
-  }, [fetchCoinsData]);
+    if (!coinsData) fetchCoinsData();
+  }, [coinsData, fetchCoinsData]);
 
   if (loading) {
     return <Loader />;
