@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const GREEN = '#16c784';
 const RED = '#ea3943';
 
-export const CoinsList: FC<IMarketData> = ({ id, name, image, current_price, symbol, price_change_percentage_1h_in_currency: oneHourChange, high_24h, low_24h }) => {
+export const CoinsList: FC<IMarketData> = ({ id, name, image, current_price, symbol, price_change_percentage_1h_in_currency: oneHourChange, high_24h, low_24h, price_change_percentage_24h }) => {
   return (
     <Link to={`/coins/${symbol}`}>
       <div className="group flex h-32 px-6 ring-2 ring-gray-200 hover:bg-gray-200 dark:hover:bg-gray-900 cursor-pointer">
@@ -33,6 +33,11 @@ export const CoinsList: FC<IMarketData> = ({ id, name, image, current_price, sym
           <span>
             <p className="text-sm" style={{ color: RED }}>
               low: {low_24h}
+            </p>
+          </span>
+          <span>
+            <p className="text-sm" style={{ color: oneHourChange >= 0 ? GREEN : RED }}>
+              %: {price_change_percentage_24h?.toFixed(2)}
             </p>
           </span>
         </span>

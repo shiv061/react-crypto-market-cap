@@ -2,7 +2,7 @@ export interface IStore {
   coins: IMarketData[] | null;
   loading: boolean;
   error: string | null;
-  fetchCoinsData: () => void;
+  fetchCoinsData: (perPage?: number) => void;
 }
 
 interface IRoi {

@@ -22,10 +22,10 @@ export const useStore = create<IStore>(
       coins: null,
       error: null,
       loading: false,
-      fetchCoinsData: async () => {
+      fetchCoinsData: async (perPage = 20) => {
         try {
           set({ loading: true, error: null });
-          const data = await fetchCoins({ currency: 'usd', perPage: 20 });
+          const data = await fetchCoins({ currency: 'usd', perPage });
           set({ coins: data, loading: false, error: null });
         } catch (error) {
           set({ error: 'Something went wrong', loading: false });

@@ -44,10 +44,13 @@ export const CoinsPage = () => {
             <div className="py-6 flex justify-center items-center" style={{ background: pageCoin?.price_change_percentage_1h_in_currency ? (pageCoin?.price_change_percentage_1h_in_currency >= 0 ? GREEN : RED) : GREEN }}>
               <p className="font-bold text-4xl text-white">${pageCoin?.current_price}</p>
             </div>
-            <div className="flex flex-col justify-center items-center py-10">
+            <div className="flex flex-col justify-center items-center py-3 md:py-10">
               <p className="dark:text-white text-xl">24h Change</p>
               <p className="dark:text-white font-bold text-lg" style={{ color: pageCoin?.price_change_24h && pageCoin?.price_change_24h > 0 ? GREEN : RED }}>
                 {pageCoin?.price_change_24h}
+              </p>
+              <p className="dark:text-white font-bold text-2xl text-center" style={{ color: pageCoin?.price_change_24h && pageCoin?.price_change_24h > 0 ? GREEN : RED }}>
+                {pageCoin?.price_change_percentage_24h} %
               </p>
             </div>
           </div>
