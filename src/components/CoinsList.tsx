@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { IMarketData } from '../store/types';
-import { motion } from 'framer-motion';
+import Overdrive from 'react-overdrive';
 
 const GREEN = '#16c784';
 const RED = '#ea3943';
@@ -42,7 +42,9 @@ export const CoinsList: FC<IMarketData> = ({ id, name, image, current_price, sym
           </span>
         </span>
         <span className="flex flex-col justify-center items-center">
-          <motion.img layout layoutId={symbol} src={image} alt={id} width={50} height={50} className="animate-transform transform group-hover:scale-125" />
+          <Overdrive id={symbol}>
+            <img src={image} alt={id} width={50} height={50} className="animate-transform transform group-hover:scale-125" />
+          </Overdrive>
         </span>
       </div>
     </Link>

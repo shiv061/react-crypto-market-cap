@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import { useStore } from '../store';
-import { motion } from 'framer-motion';
+import Overdrive from 'react-overdrive';
 
 const GREEN = '#16c784';
 const RED = '#ea3943';
@@ -18,7 +18,9 @@ export const CoinsPage = () => {
       <div className="w-full h-full flex justify-center items-center">
         <div className="w-5/6 h-3/4 md:w-2/4 md:h-3/4 relative shadow-2xl">
           <div className="w-full flex justify-center absolute -top-14">
-            <motion.img layout layoutId={pageCoin?.symbol} className="shadow-2xl rounded-full" src={pageCoin?.image} alt={pageCoin?.symbol} width={100} height={100} />
+            <Overdrive id={pageCoin?.symbol}>
+              <img className="shadow-2xl rounded-full" src={pageCoin?.image} alt={pageCoin?.symbol} width={100} height={100} />
+            </Overdrive>
           </div>
           <div className="mt-10 flex flex-col">
             <div className="h-16 pb-1 flex justify-center items-end">
