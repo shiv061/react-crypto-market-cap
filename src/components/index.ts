@@ -3,4 +3,4 @@ export * from './ErrorComponent';
 export * from './CoinsList';
 export * from './Header';
 export * from './SearchBox';
-export * from './FetchMore';
+export * from './CardLoader';

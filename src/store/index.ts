@@ -22,6 +22,10 @@ export const useStore = create<IStore>(
       coins: null,
       error: null,
       loading: false,
+      perPage: 20,
+      setPerPage: (val: number) => {
+        set({ perPage: val });
+      },
       fetchCoinsData: async (perPage = 20) => {
         try {
           set({ loading: true, error: null });

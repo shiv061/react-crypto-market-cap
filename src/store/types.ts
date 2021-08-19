@@ -2,6 +2,8 @@ export interface IStore {
   coins: IMarketData[] | null;
   loading: boolean;
   error: string | null;
+  perPage: number;
+  setPerPage: (val: number) => void;
   fetchCoinsData: (perPage?: number) => void;
 }
 
@@ -39,4 +41,5 @@ export interface IMarketData {
   roi: IRoi | null;
   last_updated: string;
   price_change_percentage_1h_in_currency: number;
+  viewRef?: (node?: Element | null) => void;
 }
