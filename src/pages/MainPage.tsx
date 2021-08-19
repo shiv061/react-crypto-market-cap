@@ -19,12 +19,14 @@ export const MainPage = () => {
 
   useEffect(() => {
     fetchCoinsData(perPage);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [perPage]);
 
   useEffect(() => {
     if (inView) {
       setPerPage(perPage + 10);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inView]);
 
   const filterCoins = useCallback(
